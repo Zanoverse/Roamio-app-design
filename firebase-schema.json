@@ -1,0 +1,83 @@
+{
+  "collections": {
+    "users": {
+      "fields": {
+        "email": "string",
+        "displayName": "string",
+        "photoURL": "string?",
+        "interests": ["string"],
+        "accessibilityNeeds": ["string"],
+        "schedule": {
+          "type": "map",
+          "fields": {
+            "monday": ["string"],
+            "tuesday": ["string"],
+            "wednesday": ["string"],
+            "thursday": ["string"],
+            "friday": ["string"],
+            "saturday": ["string"],
+            "sunday": ["string"]
+          }
+        },
+        "createdAt": "timestamp",
+        "lastLogin": "timestamp"
+      }
+    },
+    "events": {
+      "fields": {
+        "title": "string",
+        "description": "string",
+        "location": {
+          "type": "map",
+          "fields": {
+            "name": "string",
+            "coordinates": {
+              "latitude": "number",
+              "longitude": "number"
+            },
+            "building": "string?",
+            "room": "string?",
+            "accessibilityInfo": "string?"
+          }
+        },
+        "startTime": "timestamp",
+        "endTime": "timestamp",
+        "organizer": "string",
+        "categories": ["string"],
+        "imageURL": "string?",
+        "maxAttendees": "number?",
+        "currentAttendees": "number",
+        "createdAt": "timestamp"
+      }
+    },
+    "rsvps": {
+      "fields": {
+        "userId": "string",
+        "eventId": "string",
+        "status": "string", // "attending", "maybe", "not_attending"
+        "createdAt": "timestamp"
+      }
+    },
+    "notifications": {
+      "fields": {
+        "userId": "string",
+        "title": "string",
+        "body": "string",
+        "type": "string", // "event_reminder", "interest_match", "accessibility_alert"
+        "eventId": "string?",
+        "read": "boolean",
+        "createdAt": "timestamp"
+      }
+    }
+  },
+  "indexes": {
+    "events": [
+      ["startTime", "ascending"],
+      ["categories", "array"]
+    ],
+    "rsvps": [
+      ["userId", "ascending"],
+      ["eventId", "ascending"]
+    ]
+  }
+} 

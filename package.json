@@ -1,0 +1,43 @@
+{
+  "name": "roamio-app",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^14.0.0",
+    "@react-native-async-storage/async-storage": "1.21.0",
+    "@react-navigation/bottom-tabs": "^6.5.11",
+    "@react-navigation/native": "^6.1.9",
+    "expo": "53.0.0",
+    "expo-barcode-scanner": "~13.0.0",
+    "expo-camera": "~16.1.0",
+    "expo-location": "~18.1.0",
+    "expo-router": "5.0.7",
+    "expo-status-bar": "~1.11.1",
+    "firebase": "^10.7.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.73.9",
+    "react-native-gesture-handler": "~2.14.0",
+    "react-native-maps": "1.10.0",
+    "react-native-safe-area-context": "4.8.2",
+    "react-native-screens": "~3.29.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/node": "^22.15.21",
+    "@types/react": "~18.2.45",
+    "@types/react-dom": "~18.0.10",
+    "@types/react-native": "^0.72.8",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.3.0"
+  },
+  "private": true
+}
